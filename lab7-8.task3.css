@@ -1,0 +1,245 @@
+
+*{
+    font-family: 'Andika New Basic', sans-serif;  
+}
+header p{
+    text-align: center;
+    font-size: 30px;
+}
+header span{
+   color: red;
+   font-size: 40px;
+}
+.wrapper{
+    
+    display: grid;
+   grid-template-columns: repeat(4, 1hv);
+    gap: 10px;
+}
+.container {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
+   
+}
+main{
+    display: flex;
+}
+.container:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+.container .main img{
+   margin: 10px;
+   width: 200px;
+   height: 150px;
+   
+  
+}
+.container .description{
+   border-top: 1px solid black;
+   padding-left: 10px;
+ }
+ footer{
+     display:flex;
+     justify-content: space-between;
+ }
+ .menu{
+     grid-column-start: 4;
+     grid-column-end: 5;
+     grid-row-start: 1;
+     grid-row-end:4;
+     background-color: aliceblue;
+     border-radius: 10px;
+     border: 1px solid black;
+     text-align: center;
+ }
+ .wrapper .menu>img{
+     width: 200px;
+     height: 30px;
+     display: block;
+     margin: auto;
+ }
+ .container .main {
+     display: flex;
+ }
+ [type="radio"]{
+     display: none;
+ }
+ .wrapper .menu label{
+     display: block;
+     background-color: lightgray;
+     margin: auto;
+     width: 60%;
+     margin-bottom: 20px;
+     border: 1px solid black;
+     border-radius: 7px;
+ }
+ 
+ .rb1:checked ~  #Rulet,
+ .rb1:checked ~  #Syrnyky,
+ .rb1:checked ~  #Tistechko,
+ .rb1:checked ~  #Tort
+ {
+    display: none;
+ }
+ .rb2:checked ~  #Pyrih,
+ .rb2:checked ~  #Syrnyky,
+ .rb2:checked ~  #Tistechko,
+ .rb2:checked ~  #Tort
+ {
+    display: none;
+ }
+ .rb3:checked ~  #Pyrih,
+ .rb3:checked ~  #Rulet,
+ .rb3:checked ~  #Tistechko,
+ .rb3:checked ~  #Tort
+ {
+    display: none;
+ }
+ .rb4:checked ~  #Pyrih,
+ .rb4:checked ~  #Rulet,
+ .rb4:checked ~  #Syrnyky,
+ .rb4:checked ~  #Tort
+ {
+    display: none;
+ }
+ .rb5:checked ~  #Pyrih,
+ .rb5:checked ~  #Rulet,
+ .rb5:checked ~  #Syrnyky,
+ .rb5:checked ~  #Tistechko
+ {
+    display: none;
+ }
+@media (min-width:730px) and (max-width:1200px){
+    .wrapper{
+    
+        display: grid;
+       grid-template-columns: repeat(3, 1hv);
+        gap: 10px;
+    }
+    .wrapper .menu>img,
+    .wrapper .menu p
+    {
+        
+        display:none;
+       
+    }
+    .wrapper .menu label{
+        display: inline-block;
+        background-color: lightgray;
+        margin: auto;
+        width: 95%;
+        padding: 9px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 7px;
+    }
+    .wrapper .menu {
+        display: grid;
+        grid-template-columns: repeat(3, 355px);
+        grid-template-rows: repeat(2, 1hv);
+        gap: 10px;
+    }
+    .menu{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end:2;
+        text-align: center;
+        background-color: white;
+     border-radius: none;
+     border: none;
+     text-align: none;
+    }
+    
+    footer a::before{   
+    content: "✉ \0a ";
+    white-space:pre;
+    }
+    .container .description{
+        display: none;
+    }
+    .container .main {
+        display: block;
+    }
+    .wrapper .container img{
+        width: 80%;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .wrapper .container .main p{
+       margin: 10px;
+    }
+}
+
+@media (max-width:730px){
+    .wrapper{
+    
+        display: grid;
+       grid-template-columns:1hv;
+        gap: 10px;
+    }
+    .wrapper .menu>img,
+    .wrapper .menu p,
+    .container .main p
+    {
+        
+        display:none;
+       
+    }
+    .wrapper .menu label{
+        display: inline-block;
+        background-color: lightgray;
+        margin: auto;
+        width: 75%;
+        padding: 30px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 7px;
+        
+    }
+    .wrapper .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 22em);
+        grid-template-rows: repeat(3, 100px);
+        gap: 10px;
+    }
+    .menu{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end:2;
+        text-align: center;
+        background-color: white;
+     border-radius: none;
+     border: none;
+     text-align: none;
+    }
+    
+    footer a::before{   
+    content: "✉ \0a ";
+    white-space:pre;
+    }
+    .container .description{
+        display: none;
+    }
+    .container .main {
+        display: block;
+    }
+    .wrapper .container img{
+        width: 80%;
+        height: 20em;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .wrapper .container .main p{
+       margin: 10px;
+    }
+    footer{
+        display:grid;
+        
+    }
+}
